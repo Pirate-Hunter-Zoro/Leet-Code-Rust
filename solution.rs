@@ -15,7 +15,7 @@ impl Solution {
         // Create a map to store the indices and values of the numbers
         let mut map: HashMap<i32, i32> = HashMap::new();
 
-        // Iterate through the numbers
+        // Iterate through the numbers - nums.iter() gives you references to numbers in the input vector, but we want the actual value; hence the '&' dereference
         for (i, &num) in nums.iter().enumerate() {
             // Calculate the difference between the target and the current number
             let diff: i32 = target - num;
